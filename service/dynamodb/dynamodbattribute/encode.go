@@ -225,6 +225,7 @@ func (e *Encoder) encodeStruct(av *dynamodb.AttributeValue, v reflect.Value) err
 		fv := v.FieldByIndex(f.Index)
 		elem := &dynamodb.AttributeValue{}
 		err := e.encode(elem, fv, f.tag)
+
 		skip, err := keepOrOmitEmpty(f.OmitEmpty, elem, err)
 		if err != nil {
 			return err
@@ -346,29 +347,45 @@ func (e *Encoder) encodeList(v reflect.Value, fieldTag tag, elemFn func(dynamodb
 }
 
 func (e *Encoder) encodeScalar(av *dynamodb.AttributeValue, v reflect.Value, fieldTag tag) error {
-	switch typed := v.Interface().(type) {
-	case bool:
+	switch v.Kind() {
+	case reflect.Bool:
 		av.BOOL = new(bool)
-		*av.BOOL = typed
-	case string:
+		*av.BOOL = v.Interface().(bool)
+	case reflect.String:
+		// Encode numbers
+		if v.Type() == reflect.TypeOf(Number("0")) {
+			if err := e.encodeNumber(av, v); err != nil {
+				return err
+			}
+			if fieldTag.AsString && av.NULL == nil && av.N != nil {
+				av.S = av.N
+				av.N = nil
+			}
+			return nil
+		}
 		if err := e.encodeString(av, v); err != nil {
 			return err
 		}
-	case Number:
-		s := string(typed)
+	case reflect.Float32:
+		s := strconv.FormatFloat(float64(v.Interface().(float32)), 'f', -1, 64)
 		if fieldTag.AsString {
 			av.S = &s
 		} else {
 			av.N = &s
 		}
-	default:
-		// Fallback to encoding numbers, will return invalid type if not supported
-		if err := e.encodeNumber(av, v); err != nil {
-			return err
+	case reflect.Float64:
+		s := strconv.FormatFloat(v.Interface().(float64), 'f', -1, 64)
+		if fieldTag.AsString {
+			av.S = &s
+		} else {
+			av.N = &s
 		}
-		if fieldTag.AsString && av.NULL == nil && av.N != nil {
-			av.S = av.N
-			av.N = nil
+	case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64, reflect.Uint, reflect.Uint8, reflect.Uint16, reflect.Uint32, reflect.Uint64:
+		s := fmt.Sprintf("%d", v.Interface())
+		if fieldTag.AsString {
+			av.S = &s
+		} else {
+			av.N = &s
 		}
 	}
 
@@ -406,6 +423,8 @@ func (e *Encoder) encodeNumber(av *dynamodb.AttributeValue, v reflect.Value) err
 		out = encodeFloat(float64(typed))
 	case float64:
 		out = encodeFloat(typed)
+	case Number:
+		out = string(typed)
 	default:
 		return &unsupportedMarshalTypeError{Type: v.Type()}
 	}
@@ -420,12 +439,14 @@ func (e *Encoder) encodeString(av *dynamodb.AttributeValue, v reflect.Value) err
 		return err
 	}
 
-	switch typed := v.Interface().(type) {
-	case string:
-		if len(typed) == 0 && e.NullEmptyString {
+	switch v.Kind() {
+	case reflect.String:
+		str := new(string)
+		*str = fmt.Sprintf("%s", v.Interface())
+		if len(*str) == 0 && e.NullEmptyString {
 			encodeNull(av)
 		} else {
-			av.S = &typed
+			av.S = str
 		}
 	default:
 		return &unsupportedMarshalTypeError{Type: v.Type()}
