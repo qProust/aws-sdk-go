@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/aws/aws-sdk-go/service/sqs"
+	"github.com/qProust/aws-sdk-go/aws"
+	"github.com/qProust/aws-sdk-go/aws/session"
+	"github.com/qProust/aws-sdk-go/service/sqs"
 )
 
 var _ time.Duration

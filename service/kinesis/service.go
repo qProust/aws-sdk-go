@@ -3,12 +3,12 @@
 package kinesis
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/client"
-	"github.com/aws/aws-sdk-go/aws/client/metadata"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/private/protocol/jsonrpc"
-	"github.com/aws/aws-sdk-go/private/signer/v4"
+	"github.com/qProust/aws-sdk-go/aws"
+	"github.com/qProust/aws-sdk-go/aws/client"
+	"github.com/qProust/aws-sdk-go/aws/client/metadata"
+	"github.com/qProust/aws-sdk-go/aws/request"
+	"github.com/qProust/aws-sdk-go/private/protocol/jsonrpc"
+	"github.com/qProust/aws-sdk-go/private/signer/v4"
 )
 
 // Amazon Kinesis Streams is a managed service that scales elastically for real

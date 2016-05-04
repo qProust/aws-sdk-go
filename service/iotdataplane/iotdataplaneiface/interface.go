@@ -4,8 +4,8 @@
 package iotdataplaneiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/iotdataplane"
+	"github.com/qProust/aws-sdk-go/aws/request"
+	"github.com/qProust/aws-sdk-go/service/iotdataplane"
 )
 
 // IoTDataPlaneAPI is the interface type for iotdataplane.IoTDataPlane.

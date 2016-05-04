@@ -5,10 +5,10 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/aws/aws-sdk-go/aws/awsutil"
-	"github.com/aws/aws-sdk-go/aws/request"
+	"github.com/qProust/aws-sdk-go/aws"
+	"github.com/qProust/aws-sdk-go/aws/awserr"
+	"github.com/qProust/aws-sdk-go/aws/awsutil"
+	"github.com/qProust/aws-sdk-go/aws/request"
 )
 
 // A Config provides a collection of configuration values to setup a generated

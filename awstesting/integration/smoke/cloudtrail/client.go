@@ -2,8 +2,8 @@
 package cloudtrail
 
 import (
-	"github.com/aws/aws-sdk-go/awstesting/integration/smoke"
-	"github.com/aws/aws-sdk-go/service/cloudtrail"
+	"github.com/qProust/aws-sdk-go/awstesting/integration/smoke"
+	"github.com/qProust/aws-sdk-go/service/cloudtrail"
 	. "github.com/lsegal/gucumber"
 )
 

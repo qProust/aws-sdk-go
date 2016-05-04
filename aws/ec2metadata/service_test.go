@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/ec2metadata"
-	"github.com/aws/aws-sdk-go/aws/session"
+	"github.com/qProust/aws-sdk-go/aws"
+	"github.com/qProust/aws-sdk-go/aws/ec2metadata"
+	"github.com/qProust/aws-sdk-go/aws/session"
 	"github.com/stretchr/testify/assert"
 )
 

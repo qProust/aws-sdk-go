@@ -2,8 +2,8 @@
 package datapipeline
 
 import (
-	"github.com/aws/aws-sdk-go/awstesting/integration/smoke"
-	"github.com/aws/aws-sdk-go/service/datapipeline"
+	"github.com/qProust/aws-sdk-go/awstesting/integration/smoke"
+	"github.com/qProust/aws-sdk-go/service/datapipeline"
 	. "github.com/lsegal/gucumber"
 )
 

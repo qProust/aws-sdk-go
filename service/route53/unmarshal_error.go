@@ -5,9 +5,9 @@ import (
 	"encoding/xml"
 	"io/ioutil"
 
-	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/private/protocol/restxml"
+	"github.com/qProust/aws-sdk-go/aws/awserr"
+	"github.com/qProust/aws-sdk-go/aws/request"
+	"github.com/qProust/aws-sdk-go/private/protocol/restxml"
 )
 
 type baseXMLErrorResponse struct {

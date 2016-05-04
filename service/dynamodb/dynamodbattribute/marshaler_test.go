@@ -5,10 +5,10 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/aws/aws-sdk-go/aws/awsutil"
-	"github.com/aws/aws-sdk-go/service/dynamodb"
+	"github.com/qProust/aws-sdk-go/aws"
+	"github.com/qProust/aws-sdk-go/aws/awserr"
+	"github.com/qProust/aws-sdk-go/aws/awsutil"
+	"github.com/qProust/aws-sdk-go/service/dynamodb"
 )
 
 type simpleMarshalStruct struct {

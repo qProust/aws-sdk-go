@@ -4,8 +4,8 @@
 package inspectoriface
 
 import (
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/inspector"
+	"github.com/qProust/aws-sdk-go/aws/request"
+	"github.com/qProust/aws-sdk-go/service/inspector"
 )
 
 // InspectorAPI is the interface type for inspector.Inspector.

@@ -4,8 +4,8 @@
 package directoryserviceiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/directoryservice"
+	"github.com/qProust/aws-sdk-go/aws/request"
+	"github.com/qProust/aws-sdk-go/service/directoryservice"
 )
 
 // DirectoryServiceAPI is the interface type for directoryservice.DirectoryService.

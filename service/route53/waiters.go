@@ -3,7 +3,7 @@
 package route53
 
 import (
-	"github.com/aws/aws-sdk-go/private/waiter"
+	"github.com/qProust/aws-sdk-go/private/waiter"
 )
 
 func (c *Route53) WaitUntilResourceRecordSetsChanged(input *GetChangeInput) error {

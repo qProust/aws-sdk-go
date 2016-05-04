@@ -8,10 +8,10 @@ import (
 	"io"
 	"time"
 
-	"github.com/aws/aws-sdk-go/aws/awsutil"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/private/protocol"
-	"github.com/aws/aws-sdk-go/private/protocol/restxml"
+	"github.com/qProust/aws-sdk-go/aws/awsutil"
+	"github.com/qProust/aws-sdk-go/aws/request"
+	"github.com/qProust/aws-sdk-go/private/protocol"
+	"github.com/qProust/aws-sdk-go/private/protocol/restxml"
 )
 
 const opAbortMultipartUpload = "AbortMultipartUpload"

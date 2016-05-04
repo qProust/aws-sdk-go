@@ -13,10 +13,10 @@ import (
 	. "github.com/lsegal/gucumber"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/aws/aws-sdk-go/aws/awsutil"
-	"github.com/aws/aws-sdk-go/aws/session"
+	"github.com/qProust/aws-sdk-go/aws"
+	"github.com/qProust/aws-sdk-go/aws/awserr"
+	"github.com/qProust/aws-sdk-go/aws/awsutil"
+	"github.com/qProust/aws-sdk-go/aws/session"
 )
 
 // Session is a shared session for all integration smoke tests to use.

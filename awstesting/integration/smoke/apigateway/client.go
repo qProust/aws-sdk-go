@@ -2,8 +2,8 @@
 package apigateway
 
 import (
-	"github.com/aws/aws-sdk-go/awstesting/integration/smoke"
-	"github.com/aws/aws-sdk-go/service/apigateway"
+	"github.com/qProust/aws-sdk-go/awstesting/integration/smoke"
+	"github.com/qProust/aws-sdk-go/service/apigateway"
 	. "github.com/lsegal/gucumber"
 )
 

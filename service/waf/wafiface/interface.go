@@ -4,8 +4,8 @@
 package wafiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/waf"
+	"github.com/qProust/aws-sdk-go/aws/request"
+	"github.com/qProust/aws-sdk-go/service/waf"
 )
 
 // WAFAPI is the interface type for waf.WAF.

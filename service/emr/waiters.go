@@ -3,7 +3,7 @@
 package emr
 
 import (
-	"github.com/aws/aws-sdk-go/private/waiter"
+	"github.com/qProust/aws-sdk-go/private/waiter"
 )
 
 func (c *EMR) WaitUntilClusterRunning(input *DescribeClusterInput) error {

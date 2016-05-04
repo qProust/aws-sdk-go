@@ -6,10 +6,10 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/awstesting/unit"
-	"github.com/aws/aws-sdk-go/service/s3"
+	"github.com/qProust/aws-sdk-go/aws"
+	"github.com/qProust/aws-sdk-go/aws/request"
+	"github.com/qProust/aws-sdk-go/awstesting/unit"
+	"github.com/qProust/aws-sdk-go/service/s3"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -2,9 +2,9 @@
 package devicefarm
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/awstesting/integration/smoke"
-	"github.com/aws/aws-sdk-go/service/devicefarm"
+	"github.com/qProust/aws-sdk-go/aws"
+	"github.com/qProust/aws-sdk-go/awstesting/integration/smoke"
+	"github.com/qProust/aws-sdk-go/service/devicefarm"
 	. "github.com/lsegal/gucumber"
 )
 

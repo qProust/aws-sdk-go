@@ -15,8 +15,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/aws/aws-sdk-go/private/model/api"
-	"github.com/aws/aws-sdk-go/private/util"
+	"github.com/qProust/aws-sdk-go/private/model/api"
+	"github.com/qProust/aws-sdk-go/private/util"
 )
 
 type generateInfo struct {
@@ -99,7 +99,7 @@ func main() {
 	var svcPath, sessionPath, svcImportPath string
 	flag.StringVar(&svcPath, "path", "service", "directory to generate service clients in")
 	flag.StringVar(&sessionPath, "sessionPath", filepath.Join("aws", "session"), "generate session service client factories")
-	flag.StringVar(&svcImportPath, "svc-import-path", "github.com/aws/aws-sdk-go/service", "namespace to generate service client Go code import path under")
+	flag.StringVar(&svcImportPath, "svc-import-path", "github.com/qProust/aws-sdk-go/service", "namespace to generate service client Go code import path under")
 	flag.Parse()
 
 	files := []string{}

@@ -4,8 +4,8 @@
 package rdsiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/rds"
+	"github.com/qProust/aws-sdk-go/aws/request"
+	"github.com/qProust/aws-sdk-go/service/rds"
 )
 
 // RDSAPI is the interface type for rds.RDS.

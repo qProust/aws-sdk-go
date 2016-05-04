@@ -3,7 +3,7 @@
 package elasticache
 
 import (
-	"github.com/aws/aws-sdk-go/private/waiter"
+	"github.com/qProust/aws-sdk-go/private/waiter"
 )
 
 func (c *ElastiCache) WaitUntilCacheClusterAvailable(input *DescribeCacheClustersInput) error {

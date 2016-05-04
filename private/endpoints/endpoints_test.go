@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/aws/aws-sdk-go/private/endpoints"
+	"github.com/qProust/aws-sdk-go/private/endpoints"
 )
 
 func TestGenericEndpoint(t *testing.T) {

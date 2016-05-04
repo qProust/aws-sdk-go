@@ -4,8 +4,8 @@
 package sesiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/ses"
+	"github.com/qProust/aws-sdk-go/aws/request"
+	"github.com/qProust/aws-sdk-go/service/ses"
 )
 
 // SESAPI is the interface type for ses.SES.

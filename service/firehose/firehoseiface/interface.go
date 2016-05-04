@@ -4,8 +4,8 @@
 package firehoseiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/firehose"
+	"github.com/qProust/aws-sdk-go/aws/request"
+	"github.com/qProust/aws-sdk-go/service/firehose"
 )
 
 // FirehoseAPI is the interface type for firehose.Firehose.

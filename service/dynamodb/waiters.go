@@ -3,7 +3,7 @@
 package dynamodb
 
 import (
-	"github.com/aws/aws-sdk-go/private/waiter"
+	"github.com/qProust/aws-sdk-go/private/waiter"
 )
 
 func (c *DynamoDB) WaitUntilTableExists(input *DescribeTableInput) error {

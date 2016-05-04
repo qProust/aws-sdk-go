@@ -4,8 +4,8 @@
 package databasemigrationserviceiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/databasemigrationservice"
+	"github.com/qProust/aws-sdk-go/aws/request"
+	"github.com/qProust/aws-sdk-go/service/databasemigrationservice"
 )
 
 // DatabaseMigrationServiceAPI is the interface type for databasemigrationservice.DatabaseMigrationService.

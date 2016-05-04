@@ -1,11 +1,11 @@
 package awstesting
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/client"
-	"github.com/aws/aws-sdk-go/aws/client/metadata"
-	"github.com/aws/aws-sdk-go/aws/defaults"
-	"github.com/aws/aws-sdk-go/awstesting/mock"
+	"github.com/qProust/aws-sdk-go/aws"
+	"github.com/qProust/aws-sdk-go/aws/client"
+	"github.com/qProust/aws-sdk-go/aws/client/metadata"
+	"github.com/qProust/aws-sdk-go/aws/defaults"
+	"github.com/qProust/aws-sdk-go/awstesting/mock"
 )
 
 // NewClient creates and initializes a generic service client for testing.

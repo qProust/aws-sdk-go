@@ -9,12 +9,12 @@
 package session
 
 import (
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/client"
-	"github.com/aws/aws-sdk-go/aws/corehandlers"
-	"github.com/aws/aws-sdk-go/aws/defaults"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/private/endpoints"
+	"github.com/qProust/aws-sdk-go/aws"
+	"github.com/qProust/aws-sdk-go/aws/client"
+	"github.com/qProust/aws-sdk-go/aws/corehandlers"
+	"github.com/qProust/aws-sdk-go/aws/defaults"
+	"github.com/qProust/aws-sdk-go/aws/request"
+	"github.com/qProust/aws-sdk-go/private/endpoints"
 )
 
 // A Session provides a central location to create service clients from and

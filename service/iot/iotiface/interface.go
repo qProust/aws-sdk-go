@@ -4,8 +4,8 @@
 package iotiface
 
 import (
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/service/iot"
+	"github.com/qProust/aws-sdk-go/aws/request"
+	"github.com/qProust/aws-sdk-go/service/iot"
 )
 
 // IoTAPI is the interface type for iot.IoT.

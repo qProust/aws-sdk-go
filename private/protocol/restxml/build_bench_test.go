@@ -7,11 +7,11 @@ import (
 
 	"bytes"
 	"encoding/xml"
-	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/aws/aws-sdk-go/awstesting"
-	"github.com/aws/aws-sdk-go/private/protocol/restxml"
-	"github.com/aws/aws-sdk-go/service/cloudfront"
+	"github.com/qProust/aws-sdk-go/aws"
+	"github.com/qProust/aws-sdk-go/aws/request"
+	"github.com/qProust/aws-sdk-go/awstesting"
+	"github.com/qProust/aws-sdk-go/private/protocol/restxml"
+	"github.com/qProust/aws-sdk-go/service/cloudfront"
 )
 
 func BenchmarkRESTXMLBuild_Complex_cloudfrontCreateDistribution(b *testing.B) {

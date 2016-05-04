@@ -2,8 +2,8 @@
 package ses
 
 import (
-	"github.com/aws/aws-sdk-go/awstesting/integration/smoke"
-	"github.com/aws/aws-sdk-go/service/ses"
+	"github.com/qProust/aws-sdk-go/awstesting/integration/smoke"
+	"github.com/qProust/aws-sdk-go/service/ses"
 	. "github.com/lsegal/gucumber"
 )
 
