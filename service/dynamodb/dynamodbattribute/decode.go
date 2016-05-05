@@ -455,8 +455,10 @@ func (d *Decoder) decodeString(s *string, v reflect.Value, fieldTag tag) error {
 	}
 
 	switch v.Kind() {
-	case reflect.String, reflect.Interface:
+	case reflect.Interface:
 		v.Set(reflect.ValueOf(*s))
+	case reflect.String:
+		v.SetString(*s)
 	default:
 		return &UnmarshalTypeError{Value: "string", Type: v.Type()}
 	}
