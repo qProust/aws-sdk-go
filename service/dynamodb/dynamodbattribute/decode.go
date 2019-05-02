@@ -430,7 +430,10 @@ func (d *Decoder) decodeMap(avMap map[string]*dynamodb.AttributeValue, v reflect
 		fields := unionStructFields(v.Type(), d.MarshalOptions)
 		for k, av := range avMap {
 			if f, ok := fieldByName(fields, k); ok {
-				fv := v.FieldByIndex(f.Index)
+				fv := fieldByIndex(v, f.Index, func(v *reflect.Value) bool {
+					v.Set(reflect.New(v.Type().Elem()))
+					return true // to continue the loop.
+				})
 				if err := d.decode(av, fv, f.tag); err != nil {
 					return err
 				}
@@ -627,4 +630,21 @@ func (e *InvalidUnmarshalError) Message() string {
 		return "cannot unmasrhal to non-pointer value, got " + e.Type.String()
 	}
 	return "cannot unmarshal to nil value, " + e.Type.String()
+}
+
+func fieldByIndex(v reflect.Value, index []int,
+	OnEmbeddedNilStruct func(*reflect.Value) bool) reflect.Value {
+	fv := v
+	for i, x := range index {
+		if i > 0 {
+			if fv.Kind() == reflect.Ptr && fv.Type().Elem().Kind() == reflect.Struct {
+				if fv.IsNil() && !OnEmbeddedNilStruct(&fv) {
+					break
+				}
+				fv = fv.Elem()
+			}
+		}
+		fv = fv.Field(x)
+	}
+	return fv
 }
