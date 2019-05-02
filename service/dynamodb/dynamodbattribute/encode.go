@@ -366,15 +366,8 @@ func (e *Encoder) encodeScalar(av *dynamodb.AttributeValue, v reflect.Value, fie
 		if err := e.encodeString(av, v); err != nil {
 			return err
 		}
-	case reflect.Float32:
-		s := strconv.FormatFloat(float64(v.Interface().(float32)), 'f', -1, 64)
-		if fieldTag.AsString {
-			av.S = &s
-		} else {
-			av.N = &s
-		}
-	case reflect.Float64:
-		s := strconv.FormatFloat(v.Interface().(float64), 'f', -1, 64)
+	case reflect.Float32, reflect.Float64:
+		s := strconv.FormatFloat(v.Float(), 'f', -1, 64)
 		if fieldTag.AsString {
 			av.S = &s
 		} else {
